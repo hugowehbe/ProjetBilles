@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import modele.Bille;
 import mesmaths.geometrie.base.Vecteur;
+import visitor.VisitorBille;
 
 public abstract class DecorateurBille extends Bille{
 
@@ -93,7 +94,7 @@ public abstract class DecorateurBille extends Bille{
     }
 
 
-
+    public void dessine(VisitorBille v) { v.visite(this); }
 
 
 }

@@ -12,6 +12,10 @@ public class Observer implements java.util.Observer {
         this.animationBilles = animationBilles;
     }
 
+    public Observer(){
+
+    }
+
     @Override
     public void update(Observable o, Object arg) {
 
