@@ -4,20 +4,10 @@
     <list default="true" id="1ce653ed-ba17-4e7b-a538-ff613a8a52bd" name="Default Changelist" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectBilles/visitor/Dessinateur.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProjectBilles/visitor/VisitorBille.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/visitor/Dessinateur.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/visitor/VisitorBille.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectBilles/decorateur/BilleSimple.class" afterPath="$PROJECT_DIR$/out/production/ProjectBilles/decorateur/BilleSimple.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectBilles/decorateur/DecorateurBille.class" afterPath="$PROJECT_DIR$/out/production/ProjectBilles/decorateur/DecorateurBille.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectBilles/modele/Bille.class" afterPath="$PROJECT_DIR$/out/production/ProjectBilles/modele/Bille.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectBilles/vues/Billard.class" afterPath="$PROJECT_DIR$/out/production/ProjectBilles/vues/Billard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/decorateur/BillePilotee.java" afterPath="$PROJECT_DIR$/src/decorateur/BillePilotee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/decorateur/BilleSimple.java" afterPath="$PROJECT_DIR$/src/decorateur/BilleSimple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/decorateur/DecorateurBille.java" afterPath="$PROJECT_DIR$/src/decorateur/DecorateurBille.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exodecorateur_angryballs/maladroit/VueBillardFactice.java" afterPath="$PROJECT_DIR$/src/exodecorateur_angryballs/maladroit/VueBillardFactice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modele/Bille.java" afterPath="$PROJECT_DIR$/src/modele/Bille.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/observer/Observer.java" afterPath="$PROJECT_DIR$/src/observer/Observer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/Billard.java" afterPath="$PROJECT_DIR$/src/vues/Billard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vues/VueBillard.java" afterPath="$PROJECT_DIR$/src/vues/VueBillard.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -413,12 +403,20 @@
       <updated>1543580502057</updated>
       <workItem from="1543580503624" duration="11487000" />
       <workItem from="1543592023027" duration="67000" />
-      <workItem from="1543615732517" duration="9000" />
+      <workItem from="1543615732517" duration="62000" />
     </task>
+    <task id="LOCAL-00001" summary="Default Changelist">
+      <created>1543615759653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543615759653</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15002000" />
+    <option name="totallyTimeSpent" value="15055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -457,6 +455,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
