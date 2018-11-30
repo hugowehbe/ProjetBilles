@@ -26,6 +26,8 @@ public class BillePilotee extends DecorateurBille implements Observer
     {
         super(billeDecoree);
         this.souris = souris;
+
+        //Ecouteur a changer, à mettre dans cadre
         souris.addObserver(this);
         initalize();
     }

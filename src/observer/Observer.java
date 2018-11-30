@@ -16,6 +16,10 @@ public class Observer implements java.util.Observer {
         this.audiosBilles = audiosBilles;
     }
 
+    public Observer(){
+
+    }
+
     @Override
     public void update(Observable o, Object arg) {
 

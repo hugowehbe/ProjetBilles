@@ -6,6 +6,7 @@ import java.util.Vector;
 import mesmaths.cinematique.Cinematique;
 import mesmaths.geometrie.base.Geop;
 import mesmaths.geometrie.base.Vecteur;
+import visitor.VisitorBille;
 
 
 /**
@@ -160,7 +161,7 @@ public abstract class Bille
 
 
 
-    public void dessine (Graphics g)
+  /*  public void dessine (Graphics g)
     {
         int width, height;
         int xMin, yMin;
@@ -174,7 +175,8 @@ public abstract class Bille
         g.fillOval( xMin, yMin, width, height);
         g.setColor(Color.CYAN);
         g.drawOval(xMin, yMin, width, height);
-    }
+    }*/
+  public abstract void dessine(VisitorBille v);
 
 
     public String toString()

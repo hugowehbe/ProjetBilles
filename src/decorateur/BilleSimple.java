@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import modele.Bille;
 import mesmaths.geometrie.base.Vecteur;
+import visitor.VisitorBille;
 
 public class BilleSimple extends Bille {
 
@@ -26,6 +27,11 @@ public class BilleSimple extends Bille {
     public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur,
                                  double hauteur) {
 
+    }
+
+    @Override
+    public void dessine(VisitorBille v) {
+        v.visite(this);
     }
 
     @Override
