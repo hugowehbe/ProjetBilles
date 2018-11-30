@@ -24,7 +24,7 @@ public class BilleMvtNewton extends DecorateurBille {
 	public void gestionAccélération(Vector<Bille> billes) {
 		// TODO Auto-generated method stub
 		this.getBilleDecore().gestionAccélération(billes);
-		this.getAccélération().ajoute(OutilsBille.gestionAccélérationNewton(this.getBilleDecore(), billes));
+		this.getBilleDecore().getAccélération().ajoute(OutilsBille.gestionAccélérationNewton(this.getBilleDecore(), billes));
 	}
 
 }

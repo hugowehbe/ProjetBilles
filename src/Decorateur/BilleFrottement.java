@@ -25,7 +25,7 @@ public class BilleFrottement extends DecorateurBille {
 	public void gestionAccélération(Vector<Bille> billes) {
 		// TODO Auto-generated method stub
 		this.getBilleDecore().gestionAccélération(billes);
-		this.getAccélération().ajoute(MecaniquePoint.freinageFrottement(this.masse(), this.getVitesse()));
+		this.getBilleDecore().getAccélération().ajoute(MecaniquePoint.freinageFrottement(this.getBilleDecore().masse(), this.getBilleDecore().getVitesse()));
 	}
 
 }

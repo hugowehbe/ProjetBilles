@@ -6,7 +6,6 @@ import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
 import exodecorateur_angryballs.maladroit.modele.Bille;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtRUPasseMurailles;
 import exodecorateur_angryballs.maladroit.vues.VueBillard;
 
 public class TestAnimationBilles

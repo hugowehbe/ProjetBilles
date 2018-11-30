@@ -32,7 +32,6 @@ public class BillePasseMuraille extends DecorateurBille {
 	@Override
 	public void gestionAccélération(Vector<Bille> billes) {
 		this.getBilleDecore().gestionAccélération(billes);
-
 	}
 
 }

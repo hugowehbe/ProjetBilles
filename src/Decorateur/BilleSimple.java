@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.Vector;
 
 import exodecorateur_angryballs.maladroit.modele.Bille;
+import mesmaths.cinematique.brouillon.Collisions;
 import mesmaths.geometrie.base.Vecteur;
 
 public class BilleSimple extends Bille {
@@ -25,6 +26,7 @@ public class BilleSimple extends Bille {
 	@Override
 	public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur,
 			double hauteur) {
+		
 	}
 	
 	@Override

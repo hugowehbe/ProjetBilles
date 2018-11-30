@@ -34,6 +34,14 @@ public static double ro = 1;        // masse volumique
 
 
 
+/**
+ * @return the couleur
+ */
+public Color getCouleur()
+{
+return this.couleur;
+}
+
 
 /**
  * @return the position
@@ -94,7 +102,7 @@ return this.clef;
 
 
 
-public double masse() {return ro*Geop.volumeSphère(rayon);}
+public double masse() {return ro*Geop.volumeSphère(getRayon());}
 
 
 
@@ -119,7 +127,7 @@ Cinematique.mouvementUniformémentAccéléré( this.getPosition(), this.getVitesse()
  * La nature du calcul du vecteur accélération de la bille  est définie dans les classes dérivées
  * A ce niveau le vecteur accélération est mis à zéro (c'est à dire pas d'accélération)
  * */
-public  void gestionAccélération(Vector<Bille> billes)
+public void gestionAccélération(Vector<Bille> billes)
 {
 this.getAccélération().set(Vecteur.VECTEURNUL);
 }
@@ -158,12 +166,12 @@ public void dessine (Graphics g)
     int width, height;
     int xMin, yMin;
     
-    xMin = (int)Math.round(position.x-rayon);
-    yMin = (int)Math.round(position.y-rayon);
+    xMin = (int)Math.round(getPosition().x-getRayon());
+    yMin = (int)Math.round(getPosition().y-getRayon());
 
-    width = height = 2*(int)Math.round(rayon); 
+    width = height = 2*(int)Math.round(getRayon()); 
 
-    g.setColor(couleur);
+    g.setColor(getCouleur());
     g.fillOval( xMin, yMin, width, height);
     g.setColor(Color.CYAN);
     g.drawOval(xMin, yMin, width, height);
@@ -172,7 +180,7 @@ public void dessine (Graphics g)
 
 public String toString() 
     {
-    return "centre = " + position + " rayon = "+rayon +  " vitesse = " + vitesse + " accélération = " + accélération + " couleur = " + couleur + "clef = " + clef;
+    return "centre = " + getPosition() + " rayon = "+getRayon() +  " vitesse = " + getVitesse() + " accélération = " + getAccélération() + " couleur = " + getCouleur() + "clef = " + getClef();
     }
 
 //----------------- classe Bille -------------------------------------
