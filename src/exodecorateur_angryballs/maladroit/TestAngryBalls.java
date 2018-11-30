@@ -13,6 +13,7 @@ import modele.Bille;
 import observer.Observer;
 import observer.ObserverArret;
 import observer.ObserverLancer;
+import son.AudiosBilles;
 import vues.CadreAngryBalls;
 
 /**
@@ -95,8 +96,11 @@ public class TestAngryBalls {
 
 
 		billes.add(new BillePasseMuraille(new BilleSimple(p3, rayon, v3, Color.cyan)));*/
-		billes.add(new BilleMvtNewton(new BilleArret(new BilleSimple(p4, rayon, v4, Color.black))));
-		billes.add(new BillePilotee(new BilleSimple(p0,rayon,v0, Color.pink),souris));
+		billes.add(new BilleRebond(new BilleArret(new BilleSimple(p4, rayon, v4, Color.black))));
+		billes.add(new BilleRebond(new BilleArret(new BilleSimple(p3, rayon, v3, Color.yellow))));
+		billes.add(new BilleRebond(new BilleArret(new BilleSimple(p2, rayon, v2, Color.blue))));
+		billes.add(new BilleRebond(new BilleArret(new BilleSimple(p1, rayon, v1, Color.green))));
+		billes.add(new BilleRebond(new BillePilotee(new BilleSimple(p0,rayon,v0, Color.pink),souris)));
 
 		// ---------------------- ici finit la partie à changer
 		// -------------------------------------------------------------
@@ -107,6 +111,7 @@ public class TestAngryBalls {
 		// (c'est un thread séparé) -----------------------
 
 		AnimationBilles animationBilles = new AnimationBilles(billes, cadre);
+		AudiosBilles audiosBilles = new AudiosBilles(billes, cadre);
 
 		// ----------------------- mise en place des écouteurs de boutons qui
 		// permettent de contrôler (un peu...) l'application -----------------
@@ -124,8 +129,8 @@ public class TestAngryBalls {
 		// : à
 		// changer*/
 
-		ObserverLancer lancer = new ObserverLancer(animationBilles);
-		ObserverArret arret = new ObserverArret(animationBilles);
+		ObserverLancer lancer = new ObserverLancer(animationBilles,audiosBilles);
+		ObserverArret arret = new ObserverArret(animationBilles,audiosBilles);
 
 		cadre.ecouteurBoutonLancer.addObserver(lancer);
 		cadre.ecouteurBoutonArreter.addObserver(arret);

@@ -64,5 +64,6 @@ public class BillePilotee extends DecorateurBille implements Observer
 
     @Override
     public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur) {
+        this.getBilleDecore().collisionContour(abscisseCoinHautGauche,ordonnéeCoinHautGauche,largeur,hauteur);
     }
 }
