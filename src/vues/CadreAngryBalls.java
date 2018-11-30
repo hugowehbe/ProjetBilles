@@ -3,6 +3,8 @@ package vues;
 import java.awt.*;
 import java.util.Vector;
 
+import ecouteur.EcouteurBoutonArreter;
+import ecouteur.EcouteurBoutonLancer;
 import modele.Bille;
 
 
@@ -24,7 +26,9 @@ public class CadreAngryBalls extends Frame implements VueBillard
     public Button lancerBilles, arrêterBilles;
     Panel haut, centre, bas;
 
-    EcouteurTerminaison ecouteurTerminaison;
+    public EcouteurBoutonArreter ecouteurBoutonArreter;
+    public EcouteurBoutonLancer ecouteurBoutonLancer;
+    public EcouteurTerminaison ecouteurTerminaison;
 
     public CadreAngryBalls(String titre, String message, Vector<Bille> billes) throws HeadlessException
     {
@@ -49,7 +53,13 @@ public class CadreAngryBalls extends Frame implements VueBillard
         this.add(this.billard);
 
         this.lancerBilles = new Button("lancer les billes"); this.bas.add(this.lancerBilles);
+        ecouteurBoutonLancer = new EcouteurBoutonLancer();
+        this.lancerBilles.addActionListener(ecouteurBoutonLancer);
+
+
         this.arrêterBilles = new Button("arrêter les billes"); this.bas.add(this.arrêterBilles);
+        ecouteurBoutonArreter = new EcouteurBoutonArreter();
+        this.arrêterBilles.addActionListener(ecouteurBoutonArreter);
 
     }
 

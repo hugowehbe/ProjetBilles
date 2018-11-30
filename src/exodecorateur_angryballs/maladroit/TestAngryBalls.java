@@ -10,6 +10,9 @@ import ecouteur.EcouteurSouris;
 import mesmaths.geometrie.base.Vecteur;
 
 import modele.Bille;
+import observer.Observer;
+import observer.ObserverArret;
+import observer.ObserverLancer;
 import vues.CadreAngryBalls;
 
 /**
@@ -91,8 +94,8 @@ public class TestAngryBalls {
 		billes.add(new BilleRebond(new BilleFrottement(new BilleMvtNewton(new BilleSimple(p2, rayon, v2, Color.green)))));
 
 
-		billes.add(new BillePasseMuraille(new BilleSimple(p3, rayon, v3, Color.cyan)));
-		billes.add(new BilleMvtNewton(new BilleArret(new BilleSimple(p4, rayon, v4, Color.black))));*/
+		billes.add(new BillePasseMuraille(new BilleSimple(p3, rayon, v3, Color.cyan)));*/
+		billes.add(new BilleMvtNewton(new BilleArret(new BilleSimple(p4, rayon, v4, Color.black))));
 		billes.add(new BillePilotee(new BilleSimple(p0,rayon,v0, Color.pink),souris));
 
 		// ---------------------- ici finit la partie à changer
@@ -108,7 +111,7 @@ public class TestAngryBalls {
 		// ----------------------- mise en place des écouteurs de boutons qui
 		// permettent de contrôler (un peu...) l'application -----------------
 
-		EcouteurBoutonLancer écouteurBoutonLancer = new EcouteurBoutonLancer(animationBilles);
+		/*EcouteurBoutonLancer écouteurBoutonLancer = new EcouteurBoutonLancer(animationBilles);
 		EcouteurBoutonArreter écouteurBoutonArrêter = new EcouteurBoutonArreter(animationBilles);
 
 		// ------------------------- activation des écouteurs des boutons et ça
@@ -119,7 +122,15 @@ public class TestAngryBalls {
 		// changer
 		cadre.arrêterBilles.addActionListener(écouteurBoutonArrêter); // maladroit
 		// : à
-		// changer
+		// changer*/
+
+		ObserverLancer lancer = new ObserverLancer(animationBilles);
+		ObserverArret arret = new ObserverArret(animationBilles);
+
+		cadre.ecouteurBoutonLancer.addObserver(lancer);
+		cadre.ecouteurBoutonArreter.addObserver(arret);
+
+
 
 	}
 

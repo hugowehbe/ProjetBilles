@@ -4,31 +4,21 @@ import exodecorateur_angryballs.maladroit.AnimationBilles;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Observable;
 
 /**
  *  ICI : IL N'Y A RIEN A CHANGER 
- *  
+ *
  *  */
-public class EcouteurBoutonLancer implements ActionListener
+public class EcouteurBoutonLancer extends Observable implements ActionListener
 {
-AnimationBilles animationBilles;
+    public EcouteurBoutonLancer() { }
 
-
-
-/**
- * @param animationsBilles
- */
-public EcouteurBoutonLancer(AnimationBilles animationBilles)
-{
-this.animationBilles = animationBilles;
-}
-
-
-
-@Override
-public void actionPerformed(ActionEvent arg0)
-{
-this.animationBilles.lancerAnimation();
-}
+    @Override
+    public void actionPerformed(ActionEvent arg0)
+    {
+        this.setChanged();
+        this.notifyObservers();
+    }
 
 }
