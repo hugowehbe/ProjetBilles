@@ -7,10 +7,9 @@ import javax.sound.sampled.*;
  * esai de lecture d'un fichier son complet et envoi du son vers un haut-parleur
  *
  * */
-public class GestionAudio implements Runnable
-{
+public class GestionAudio implements Runnable {
+
     public GestionAudio() {
-        run();
     }
 
     public void run() {
@@ -112,4 +111,7 @@ info = new DataLine.Info(SourceDataLine.class, format);
         }
     }
 
+    public void start() {
+        new Thread(this).start();
+    }
 }
