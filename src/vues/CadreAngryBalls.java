@@ -3,12 +3,13 @@ package vues;
 import java.awt.*;
 import java.util.Vector;
 
-import ecouteur.EcouteurBoutonArreter;
-import ecouteur.EcouteurBoutonLancer;
+import controleur.ecouteur.EcouteurBoutonArreter;
+import controleur.ecouteur.EcouteurBoutonLancer;
+import controleur.ecouteur.EcouteurSouris;
 import modele.Bille;
 
 
-import ecouteur.EcouteurTerminaison;
+import controleur.ecouteur.EcouteurTerminaison;
 
 import outilsvues.Outils;
 
@@ -26,6 +27,7 @@ public class CadreAngryBalls extends Frame implements VueBillard
     public Button lancerBilles, arrêterBilles;
     Panel haut, centre, bas;
 
+    public EcouteurSouris ecouteurSouris;
     public EcouteurBoutonArreter ecouteurBoutonArreter;
     public EcouteurBoutonLancer ecouteurBoutonLancer;
     public EcouteurTerminaison ecouteurTerminaison;
@@ -60,6 +62,10 @@ public class CadreAngryBalls extends Frame implements VueBillard
         this.arrêterBilles = new Button("arrêter les billes"); this.bas.add(this.arrêterBilles);
         ecouteurBoutonArreter = new EcouteurBoutonArreter();
         this.arrêterBilles.addActionListener(ecouteurBoutonArreter);
+
+        ecouteurSouris = new EcouteurSouris();
+        this.billard.addMouseListener(ecouteurSouris);
+        this.billard.addMouseMotionListener(ecouteurSouris);
 
     }
 

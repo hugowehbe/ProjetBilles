@@ -117,4 +117,8 @@ for ( i = 0; i < d; ++i)
 
 return  MecaniquePoint.champGravitéGlobal( cetteBille.getPosition(),  masses, C);
 }
+
+/*public static Vecteur gestionAccélérationPilotee(Bille cetteBille, Vector<Bille> billes){
+
+}*/
 }

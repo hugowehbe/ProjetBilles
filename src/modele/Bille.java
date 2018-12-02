@@ -1,6 +1,7 @@
 package modele;
 
 import java.awt.*;
+import java.util.Observable;
 import java.util.Vector;
 
 import mesmaths.cinematique.Cinematique;
@@ -16,8 +17,7 @@ import visitor.VisitorBille;
  *
  *
  * */
-public abstract class Bille
-{
+public abstract class Bille extends Observable {
 //----------------- classe Bille-------------------------------------
 
     public  Vecteur position;   // centre de la bille
@@ -144,7 +144,12 @@ public abstract class Bille
      * */
     public boolean gestionCollisionBilleBille(Vector<Bille> billes)
     {
-        return OutilsBille.gestionCollisionBilleBille(this, billes);
+        boolean collision=OutilsBille.gestionCollisionBilleBille(this, billes);
+        if(collision){
+            setChanged();
+            notifyObservers();
+        }
+        return collision;
     }
 
 
@@ -161,22 +166,19 @@ public abstract class Bille
 
 
 
-  /*  public void dessine (Graphics g)
-    {
-        int width, height;
-        int xMin, yMin;
-
-        xMin = (int)Math.round(getPosition().x-getRayon());
-        yMin = (int)Math.round(getPosition().y-getRayon());
-
-        width = height = 2*(int)Math.round(getRayon());
-
-        g.setColor(getCouleur());
-        g.fillOval( xMin, yMin, width, height);
-        g.setColor(Color.CYAN);
-        g.drawOval(xMin, yMin, width, height);
-    }*/
-  public abstract void dessine(VisitorBille v);
+    /*  public void dessine (Graphics g)
+      {
+          int width, height;
+          int xMin, yMin;
+          xMin = (int)Math.round(getPosition().x-getRayon());
+          yMin = (int)Math.round(getPosition().y-getRayon());
+          width = height = 2*(int)Math.round(getRayon());
+          g.setColor(getCouleur());
+          g.fillOval( xMin, yMin, width, height);
+          g.setColor(Color.CYAN);
+          g.drawOval(xMin, yMin, width, height);
+      }*/
+    public abstract void dessine(VisitorBille v);
 
 
     public String toString()

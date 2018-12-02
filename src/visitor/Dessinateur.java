@@ -3,7 +3,6 @@ package visitor;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import javax.swing.JPanel;
 
 import modele.Bille;
 
