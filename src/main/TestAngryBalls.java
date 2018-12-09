@@ -10,7 +10,7 @@ import modele.Bille;
 import controleur.observer.ObserverArret;
 import controleur.observer.ObserverLancer;
 import controleur.observer.ObserverSon;
-import vues.AnimationBilles;
+import controleur.AnimationBilles;
 import vues.CadreAngryBalls;
 
 /**

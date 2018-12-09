@@ -1,12 +1,11 @@
 package vues;
 
-import java.awt.Canvas;
 import java.awt.Graphics;
 import java.util.Vector;
 
 import modele.Bille;
-import visitor.Dessinateur;
-import visitor.VisitorBille;
+import controleur.visitor.Dessinateur;
+import controleur.visitor.VisitorBille;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package visitor;
+package controleur.visitor;
 
 import java.awt.Color;
 import java.awt.Graphics;

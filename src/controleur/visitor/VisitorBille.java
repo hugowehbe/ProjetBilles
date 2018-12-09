@@ -1,4 +1,4 @@
-package visitor;
+package controleur.visitor;
 
 import modele.Bille;
 

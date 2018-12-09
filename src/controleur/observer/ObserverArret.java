@@ -1,6 +1,6 @@
 package controleur.observer;
 
-import vues.AnimationBilles;
+import controleur.AnimationBilles;
 
 import java.util.Observable;
 

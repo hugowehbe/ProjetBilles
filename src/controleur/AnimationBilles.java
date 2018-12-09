@@ -1,8 +1,9 @@
-package vues;
+package controleur;
 
 import java.util.Vector;
 
 import modele.Bille;
+import vues.VueBillard;
 
 /**
  * responsable de l'animation des billes, c-à-d responsable du mouvement de la liste des billes. met perpétuellement à jour les billes. 
